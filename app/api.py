@@ -8,12 +8,12 @@ app = FastAPI()
 app.add_middleware(LogRequests)
 
 
-# logging.basicConfig(filename='example.log',
-#                     encoding='utf-8', level=logging.INFO)
+logging.basicConfig(filename='example.log',
+                    encoding='utf-8', level=logging.INFO)
 
 # setup loggers
-logging.config.fileConfig(
-    'logging.conf', disable_existing_loggers=False, defaults='echi_export.log')
+# logging.config.fileConfig(
+#     'logging.conf', disable_existing_loggers=False, defaults='echi_export.log')
 
 # get root logger
 # the __name__ resolve to "main" since we are at the root of the project.
